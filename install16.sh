@@ -1,4 +1,4 @@
--#Update Keys
+#Update Keys
 
 sudo apt-key del 421C365BD9FF1F717815A3895523BAEEB01FA116
 sudo -E apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
@@ -23,10 +23,12 @@ git clone https://github.com/laukik-hase/rsslam_ws
 cd rsslam_ws/src
 catkin_init_workspace
 cd ..
-catkin_make -j2
+catkin_make -j2 -DCATKIN_WHITELIST_PACKAGES="ddynamic_reconfigure;depthimage_to_laserscan;realsense-ros;rgbd_launch"
 echo "source ~/rsslam_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
+cd ~
+git clone https://github.com/introlab/rtabmap.git
 cd rtabmap/build
 cmake -DCMAKE_INSTALL_PREFIX=~/rsslam_ws/devel ..
 make -j2
@@ -34,10 +36,10 @@ sudo make -j2 install
 echo "source ~/rsslam_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
-cd ~
-mv rtabmap_ros rsslam_ws/src/rtabmap_ros
-cd rsslam_ws
-catkin_make -j2
+cd ~/rsslam_ws
+catkin_make -j2 -DCATKIN_WHITELIST_PACKAGES=""
+echo "source ~/rsslam_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
 
 
 
