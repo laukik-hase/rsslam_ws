@@ -29,4 +29,4 @@ The rtabmap_ros package will subscribe to the some specified topics (in the [rta
 ```bash
 roslaunch rtabmap_ros rtabmap.launch localization:=true
 ```
-Once ,you are done with the map, save it; the above command switches the process to 'Localization mode'. If you displace the camera in space, the same movements can be visualised in the map itself, where the current position of the camera in the map is also given.
+Once, you are done with the map, save it; the above command switches the process to 'Localization mode'. If you displace the camera in space, the same movements can be visualised in the map itself, where the current position of the camera in the map is also given.
