@@ -30,3 +30,12 @@ The rtabmap_ros package will subscribe to the some specified topics (in the [rta
 roslaunch rtabmap_ros rtabmap.launch localization:=true
 ```
 Once, you are done with the map, save it; the above command switches the process to 'Localization mode'. If you displace the camera in space, the same movements can be visualised in the map itself, where the current position of the camera in the map is also given.
+
+## Demo Videos:
+- [Intel Realsense D435i Depth Camera - Basic Mapping Demo](https://www.youtube.com/watch?v=KcBZrFVRxlI)
+
+- [Intel Realsense D435i Depth Camera - IMU Pitch & Roll Demo](https://www.youtube.com/watch?v=qOyn-O5LZNQ)
+
+- [Intel Realsense D435i Depth Camera - Mapping & Localization Demo](https://www.youtube.com/watch?v=0L_K3DQey9I)
+
+- [Autonomous Quadruped Robot Demo](https://www.youtube.com/watch?v=NFO0sFC34yE)
